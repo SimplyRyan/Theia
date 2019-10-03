@@ -52,7 +52,7 @@ In Theia's world, a hostname is the FQDN of a filer system (in the context of DN
 name is the non-qualified name of the filer as returned when running the hostname command on the filer. In the CLI,
 Theia can use either one: when called with a FQDN, Theia will remove the domain part of the name and use the resulting
 string as the filer name. This split is done at the first '.' (if any) found. Thus, netapp.example.com is a hostname
-that results in a netapp filer name. The configuration file always uses the filer name.
+that results in a NetApp filer name. The configuration file always uses the filer name.
 
 Stats Preset Configuration
 
@@ -108,14 +108,14 @@ where:
 
   --datafile: file containing sample sysstat and stats output (useful for development and debugging)
   --config: location of configuration file
-  --sshkeyfile: location of SSH keys used to access the filer without entring a password (passwordless or agent)
+  --sshkeyfile: location of SSH keys used to access the filer without entering a password (passwordless or agent)
   --nagios: enable threshold evaluation and nagios passive test submission
   --pickle: location of pickle file for metrics collected (system, volumes and aggregates)
   --debug: debug output
 
 RUNNING
 
-Theia is intended to be run from cron at a frequency no higher than 5 mimutes. Before you run Theia for the first time,
+Theia is intended to be run from cron at a frequency no higher than 5 minutes. Before you run Theia for the first time,
 you must connect with the appropriate SSH key and verify the host you're connecting to (i.e., theia expects that the
 filer is already present in ~/.ssh/known_hosts).
 
